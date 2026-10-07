@@ -8,9 +8,17 @@ package com.mycompany.sistemabancario;
  *
  * @author juans
  */
-public class Main {
 
+import javax.swing.SwingUtilities;
+import vista.VistaBanco;
+
+public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new VistaBanco().setVisible(true);
+            }
+        });
     }
 }
